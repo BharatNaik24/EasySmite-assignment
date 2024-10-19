@@ -135,7 +135,7 @@
 .addToCartBtn {
   background-color: #165314;
   color: #fff;
-  
+  width: 120px;
   border-radius: 12px;
   display: flex;
   justify-content: center;
