@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Filter.css"; // Ensure you have the CSS styles
+import "./filter.css"; // Ensure you have the CSS styles
 import { IoIosAdd } from "react-icons/io";
 
 function Filter() {
