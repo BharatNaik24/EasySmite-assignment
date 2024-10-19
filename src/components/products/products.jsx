@@ -2,6 +2,8 @@ import { v4 as uuidV4 } from "uuid";
 import "./products.css";
 import { useState } from "react";
 
+import { FaMinus, FaPlus } from "react-icons/fa";
+
 const plantData = [
   {
     id: uuidV4(),
@@ -501,6 +503,7 @@ const plantData = [
 
 function Products() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [productQuantities, setProductQuantities] = useState({});
   const itemsPerPage = 12;
 
   // Create a function to get the current products based on the page
@@ -517,7 +520,16 @@ function Products() {
     setCurrentPage(page);
   };
 
+  // Function to handle quantity change for each product
+  const handleQuantityChange = (productId, amount) => {
+    setProductQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [productId]: Math.max((prevQuantities[productId] || 0) + amount, 0), // Prevents negative quantities
+    }));
+  };
+
   const listLength = plantData.length;
+
   return (
     <div className="w-100 mainBgCon">
       <div className="products-container w-100">
@@ -527,11 +539,11 @@ function Products() {
         <div className="row">
           {currentProducts().map((plant) => (
             <div
-              className="col-12 col-xs-12 col-sm-4 col-md-6 col-lg-4 mr-auto d-flex flex-wrap"
+              className="d-flex justify-content-center col-12 col-xs-12 col-sm-4 col-md-6 col-lg-4  mr-auto d-flex flex-wrap"
               key={plant.id}
             >
               <div className="">
-                <div className=" product-card d-flex flex-column justify-content-center">
+                <div className="product-card d-flex flex-column justify-content-center">
                   <img
                     src={plant.productImage}
                     alt={plant.name}
@@ -540,8 +552,7 @@ function Products() {
                   <button className="viewProductsBtn">View Product</button>
                 </div>
                 <div className="product-info">
-                  <span className="product-name">{plant.name}</span>
-
+                  <span className="product-name mb-0">{plant.name}</span>
                   <p className="product-maintenance">
                     <span className="product-type">
                       {plant.type} {plant.maintenance}
@@ -560,6 +571,28 @@ function Products() {
                       ${plant.originalPrice}
                     </span>
                     <span className="sale-price">${plant.salePrice}</span>
+                  </div>
+                  <div className="btnCon">
+                    <div className="addToCartBtn d-flex">
+                      <button
+                        className="addBtnCustom"
+                        onClick={() => handleQuantityChange(plant.id, -1)}
+                      >
+                        <FaMinus size={15} />
+                      </button>
+                      <p className="addCartText">
+                        {productQuantities[plant.id] > 0
+                          ? productQuantities[plant.id]
+                          : "Add to Cart"}
+                      </p>
+                      <button
+                        className="addBtnCustom"
+                        onClick={() => handleQuantityChange(plant.id, 1)}
+                      >
+                        <FaPlus size={15} />
+                      </button>
+                    </div>
+                    <button className="buyOnRent">Buy on Rent</button>
                   </div>
                 </div>
               </div>

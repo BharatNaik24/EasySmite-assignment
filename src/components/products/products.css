@@ -54,19 +54,18 @@
 }
 
 .product-image {
-  width: 100%;
+  width: auto;
   height: 250px;
   object-fit: contain;
-
 }
 
 .product-info {
-  padding: 5px;
+  padding: px;
 }
 
 .product-name {
   font-size: 1.2em;
-  margin: 0;
+  margin-bottom: -10px !important;
 }
 
 .product-type,
@@ -74,6 +73,7 @@
   font-size: 0.9em;
   color: #555;
   margin: 5px 0;
+  margin-top: -5px;
   width: 180px;
 }
 
@@ -82,24 +82,38 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin: 10px 0;
+  margin-top: -5px;
   width: 80%;
 }
 
 .original-price {
   text-decoration: line-through;
   color: #999;
+  font-size: 12px;
+  position: relative;
+  top: 4px;
 }
 
 .sale-price {
   font-weight: bold;
-  color: #d9534f; /* Bootstrap danger color */
+  color: #000; 
   margin-left: 2%;
+}
+.btnCon {
+  display: flex;
+  align-items: center;
+}
+
+.buyOnRent {
+  margin-left:15%;
 }
 
 .rating {
   display: flex;
   align-items: center;
   width: 80%;
+  margin-top:-10px;
+  margin-bottom: 10px;
 }
 
 .rating-stars {
@@ -108,11 +122,37 @@
   margin-right: 5px;
 }
 
-
 .viewProductsBtn {
     background-color: #165314;
     color: #fff;
     font-family: 'Roboto';
     font-weight: 100;
     padding: 1px;
+    border: none;
+    outline: none;
+}
+
+.addToCartBtn {
+  background-color: #165314;
+  color: #fff;
+  
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addCartText {
+  font-size: 10px;
+  margin: auto;
+  padding: auto;
+}
+.addBtnCustom {
+  font-family: "Roboto";
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
 }
