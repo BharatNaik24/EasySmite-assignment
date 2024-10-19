@@ -3,6 +3,7 @@ import "./products.css";
 import { useState } from "react";
 
 import { FaMinus, FaPlus } from "react-icons/fa";
+import Pagination from "../pagination/pagination ";
 
 const plantData = [
   {
@@ -533,7 +534,7 @@ function Products() {
         <div className="row">
           {currentProducts().map((plant) => (
             <div className="col" key={plant.id}>
-              <div className="">
+              <div className="productCardContainer">
                 <div className="product-card">
                   <div className="image-container">
                     <img
@@ -597,19 +598,11 @@ function Products() {
           ))}
         </div>
         {/* Pagination Controls */}
-        <div className="pagination-controls">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index + 1}
-              className={`pagination-button ${
-                currentPage === index + 1 ? "active" : ""
-              }`}
-              onClick={() => handlePageChange(index + 1)}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
       </div>
     </div>
   );

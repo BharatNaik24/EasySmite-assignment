@@ -22,18 +22,24 @@
 }
 
 .product-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 0px;
+  max-width: 300px;
+  min-width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0px;
+}
+
+.productCardContainer {
+  width: 300px;
 }
 
 .image-container {
-    min-width: 350px;
+    min-width: 200px;
     max-width: auto;
     height: 200px;
     overflow: hidden;
@@ -71,19 +77,21 @@
 
 .rating {
     display: flex;
-    align-items: center;
+    align-items: center !important;
     margin: 10px 0;
 }
 
 .rating-stars {
     width: auto;
-    height: 15px;
+    height: 25px;
     margin-right: 5px;
+    margin-top: -5px;
 }
 
 .price-rating {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
     width: 100%;
     margin: 10px 0;
 }
@@ -97,12 +105,62 @@
 .sale-price {
     font-weight: bold;
     color: #000;
+    margin-left: auto;
 }
 
 .btnCon {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Small devices (phones) */
+@media screen and (max-width: 576px) {
+  .btnCon {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch;   /* Stretch items to full width */
+  } .addToCartBtn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .btnCon {
+    flex-direction: column;    /* Arrange items in a row */
+    justify-content: flex-start !important; /* Space between items */
+  } .addToCartBtn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Large devices (desktops) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .btnCon {
+    flex-direction: column;    /* Keep items in a row */
+    justify-content: flex-start; /* Align items to the start */
+  } .addToCartBtn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Extra Large devices (large desktops) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .btnCon {
+    flex-direction: column;    /* Keep items in a row */
+    justify-content: space-between; /* Space between items */
+  } .addToCartBtn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Extra Extra Large devices (larger desktops) */
+@media screen and (min-width: 1201px) {
+  .btnCon {
+    flex-direction: row;    /* Keep items in a row */
+    justify-content: space-between; /* Space between items */
+  }
+  
 }
 
 .addToCartBtn {
@@ -111,6 +169,8 @@
     background-color: #165314;
     border-radius: 12px;
     margin-right: 10px;
+    width: 150px;
+   
 }
 
 .addBtnCustom {
@@ -138,7 +198,7 @@
 }
 
 .buyOnRent {
-    padding: 8px 12px;
+    padding: 5px 12px;
     background-color: transparent;
     color: #165314;
     border: 1px solid #165314;
