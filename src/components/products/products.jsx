@@ -582,7 +582,7 @@ function Products() {
                   </div>
                   <div className="mainSpanCon">
                     <span className="spanCon">
-                      <p className="original-price">
+                      <p className="original-price3">
                         <TbCurrencyRupee size={15} />
                         {plant.originalPrice}
                       </p>

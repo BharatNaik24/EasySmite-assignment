@@ -101,8 +101,10 @@
   align-items: center;
 }
 
-.salePrice {
-  padding-top: 16px;
+.original-price3 {
+    color: gray !important;
+    text-decoration: line-through;
+    font-size: 12px;
 }
 
 .original-price {
@@ -111,11 +113,6 @@
     font-size: 12px;
 }
 
-.sale-price {
-    font-weight: bold;
-    color: #000000 !important;
-    margin-left: 10px;
-}
 
 .btnCon {
   display: flex;

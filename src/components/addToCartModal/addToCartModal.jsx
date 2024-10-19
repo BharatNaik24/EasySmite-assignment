@@ -43,7 +43,7 @@ function CartModal({ product, ...props }) {
               <span className="original-price">
                 Original Price: ₹{product.originalPrice}
               </span>
-              <span className="sale-price">
+              <span className="sale-price3">
                 Sale Price: ₹{product.salePrice}
               </span>
             </div>
