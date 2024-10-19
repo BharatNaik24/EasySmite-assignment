@@ -1,0 +1,86 @@
+.logoCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maincon {
+    background-color: #ffffff;
+}
+.logoHeading {
+    font-size: 24px;
+}
+.logoImg {
+    width: 20%;
+}
+
+
+.active-link {
+  color: #f3a939 !important;
+  border-bottom: 3px solid #f3a939;
+  display: inline-block; 
+  width:fit-content;
+  margin: 0 auto; 
+  padding-bottom: 1px;
+}
+
+.profileAndCart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileAndCart {
+  position: relative;
+}
+
+.count {
+  position: absolute; 
+  top: 1px; 
+  right: 10px; 
+  background-color: #f3a939; 
+  color: black; 
+  border-radius: 50%; 
+  width: 20px; 
+  height: 20px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 12px; 
+}
+
+.searchCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 350px;
+  position: relative;
+}
+
+.inputs {
+  width: 100%;
+  padding-left: 30px;
+  height: 30px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  margin-left: -3%;
+  border-bottom: 1px solid gray;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.buttonIcons {
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+}

@@ -1,0 +1,88 @@
+.filter-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 20% !important;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #f0ffe5;
+  margin-bottom: 20px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  font-size: 14px;
+}
+
+.clear-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: gray;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.accordion {
+  background-color: #f0ffe5 !important;
+  border:none;
+}
+
+.accordion-item {
+  border-bottom: 2px solid #ddd;
+  align-items: center;
+  align-self:center;
+  background-color: #f0ffe5 !important;
+  border-left: none;
+  border-right: none;
+  border-top: 2px solid gray;
+}
+
+.accordion-header {
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  background-color: #f0ffe5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-header:hover {
+  background-color: #e9ecef;
+}
+
+.accordion-body {
+  padding: 10px;
+  background-color: #f0ffe5;
+}
+
+.filter-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-options li {
+  margin: 5px 0;
+}
+
+.filter-options label {
+  cursor: pointer;
+}
+
+.expandButton {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 0px;
+}
+.checkbox {
+  margin-right: 5px !important;
+}

@@ -1,0 +1,41 @@
+.slider-container {
+  padding: 20px;
+}
+
+.slickCon {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px;
+}
+
+.slickImages {
+  width: 100%; 
+  max-width: 150px;
+  height: 100px;
+  object-fit: cover; 
+  border-radius: 50%; 
+  margin-bottom: 10px; 
+}
+
+
+@media (max-width: 768px) {
+  .slickImages {
+    max-width: 120px; 
+  }
+}
+
+@media (max-width: 576px) {
+  .slickImages {
+    max-width: 100px; 
+  }
+}
+
+
+.slickPara {
+  text-align: center;
+  font-size: 14px; 
+  color: #333; 
+  width: 50%;
+}
