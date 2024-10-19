@@ -73,8 +73,9 @@
 .searchIcon {
   position: absolute;
   left: 0px;
-  top: 50%;
+  top: 10%;
   transform: translateY(-50%);
+  transform: translateX(2px);
   pointer-events: none;
 }
 
