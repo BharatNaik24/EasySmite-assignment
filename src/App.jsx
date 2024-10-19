@@ -4,6 +4,7 @@ import Header from "./components/header/header";
 import LandingPage from "./components/landingPage/landingPage";
 import Filter from "./components/filter/filter";
 import Products from "./components/products/products";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Filter />
         <Products />
       </div>
+      <Footer />
     </div>
   );
 }

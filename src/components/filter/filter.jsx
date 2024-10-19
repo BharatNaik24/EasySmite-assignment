@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./filter.css"; // Ensure you have the CSS styles
 import { IoIosAdd } from "react-icons/io";
 

@@ -1,0 +1,167 @@
+/* footer.css */
+.mainFooter {
+    background-color: #f0ffe5;   
+    padding: 40px 20px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    position: relative; 
+    left: 0; 
+    right: 0; 
+    color: #000 !important;
+    font-size: 18px;
+}
+
+
+.footer h5 {
+  font-weight: bold;
+  color: #333; 
+  margin-bottom: 20px; 
+}
+
+.footer p {
+  color: #666; 
+  line-height: 1.6;
+  font-size: 20px; 
+}
+
+.footer .unList {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.footer .unList li {
+  margin: 10px 0; 
+  color: gray; 
+  cursor: pointer; 
+  font-size: 20px;
+}
+
+.footer .unList li:hover {
+  text-decoration: underline; 
+}
+
+.footer form {
+  margin-top: 15px; 
+}
+
+.footer input[type="email"] {
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  width: 100%; 
+  max-width: 300px; 
+}
+
+.footer button {
+  padding: 10px 15px; 
+  background-color: #28a745; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+}
+
+.footer button:hover {
+  background-color: #218838; 
+}
+
+.d-flex {
+  display: flex; 
+}
+
+.container-fluid {
+  width: 100%; 
+  margin: 0; 
+}
+
+.flex-row {
+  flex-direction: row; 
+}
+
+.flex-wrap {
+  flex-wrap: wrap; 
+}
+
+.mx-auto {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.m-5 {
+  margin: 3rem; 
+}
+
+.sjustify-content-evenly {
+  justify-content: space-evenly; 
+}
+
+.subscribeCon {
+  background-color: transparent;
+  max-width: 350px;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.submitBtn {
+  background-color: #218838;
+  color: #fff;
+  width: 150px;
+  border-radius: 50px !important;
+}
+.followUsCon {
+    position: relative;
+    left: 0 !important;
+    right: 0;
+}
+.titlePara {
+    font-family: 'Roboto';
+    font-size: 31px !important;
+    font-weight: 100;
+}
+
+
+.followUsCon {
+  padding: 20px; 
+  display: flex; 
+  align-items: flex-start; 
+  gap: 15px; 
+  background-color: #f0ffe5; 
+  border-radius: 10px; 
+  width: 100%;
+}
+
+.followUsCon h5 {
+  margin: 0; 
+  font-size: 18px; 
+  color: #333; 
+  font-weight: bold;
+}
+
+.followUsCon a {
+  margin: 5px; 
+  text-decoration: none; 
+}
+
+.followUsCon img {
+  width: 30px; 
+  height: 30px;
+  border-radius: 50%;
+  transition: transform 0.3s ease; 
+}
+
+.followUsCon img:hover {
+  transform: scale(1.1); 
+}
+.custom-hr {
+  border: none;
+  height: 2px; 
+  background-color: #333; 
+  width: 100%; 
+  margin: 20px auto; 
+  opacity: 0.8; 
+  border-radius: 5px; 
+}

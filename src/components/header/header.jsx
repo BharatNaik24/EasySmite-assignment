@@ -5,8 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./header.css";
 import { useState } from "react";
-import { CiSearch, CiUser } from "react-icons/ci";
-import { LuShoppingCart } from "react-icons/lu";
+import { CiSearch } from "react-icons/ci";
 
 function Header() {
   const [activeLink, setActiveLink] = useState("home");
@@ -138,7 +137,14 @@ function Header() {
             </Nav>
             <Nav>
               <Nav.Link href="#deets" className="profileAndCart">
-                <CiUser size={25} />
+                <img
+                  src="https://i.postimg.cc/wvJk95V6/account-profile.png"
+                  alt="profile"
+                  style={{
+                    width: "30px",
+                    marginBottom: "5px",
+                  }}
+                />
                 <strong
                   style={{
                     fontSize: "12px",
@@ -149,8 +155,23 @@ function Header() {
               </Nav.Link>
               <Nav.Link href="#memes" className="profileAndCart">
                 <span className="count">3</span>
-                <LuShoppingCart size={25} />
-                <strong style={{ fontSize: "12px" }}>My Cart</strong>
+                <img
+                  src="https://i.postimg.cc/SQZ1xdLr/image-2-1.png"
+                  alt="cart"
+                  style={{
+                    width: "35px",
+                    marginBottom: "5px",
+                  }}
+                />
+                <strong
+                  style={{
+                    fontSize: "12px",
+                    marginTop: "-5px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Cart
+                </strong>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

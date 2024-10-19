@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { FaMinus, FaPlus } from "react-icons/fa";
 import Pagination from "../pagination/pagination ";
+import { TbCurrencyRupee } from "react-icons/tb";
 
 const plantData = [
   {
@@ -562,9 +563,13 @@ function Products() {
                   </div>
                   <div className="price-rating">
                     <span className="original-price">
-                      ${plant.originalPrice}
+                      <TbCurrencyRupee size={15} />
+                      {plant.originalPrice}
                     </span>
-                    <span className="sale-price">${plant.salePrice}</span>
+                    <span className="sale-price">
+                      <TbCurrencyRupee size={20} />
+                      {plant.salePrice}
+                    </span>
                   </div>
                   <div className="btnCon">
                     <div className="addToCartBtn">
@@ -590,7 +595,11 @@ function Products() {
                         <FaPlus size={8} />
                       </button>
                     </div>
-                    <button className="buyOnRent">Buy on Rent</button>
+                    {productQuantities[plant.id] > 0 ? (
+                      <button className="buyOnRent">Add to cart</button>
+                    ) : (
+                      <button className="buyOnRent">Buy on Rent</button>
+                    )}
                   </div>
                 </div>
               </div>
