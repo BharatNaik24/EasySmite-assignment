@@ -527,7 +527,7 @@ function Products() {
         <div className="row">
           {currentProducts().map((plant) => (
             <div
-              className="col-12 col-xs-12 col-sm-4 col-md-6 col-lg-3 mr-auto d-flex flex-wrap"
+              className="col-12 col-xs-12 col-sm-4 col-md-6 col-lg-4 mr-auto d-flex flex-wrap"
               key={plant.id}
             >
               <div className="">
