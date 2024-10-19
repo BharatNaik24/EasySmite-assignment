@@ -506,53 +506,46 @@ function Products() {
   const [productQuantities, setProductQuantities] = useState({});
   const itemsPerPage = 12;
 
-  // Create a function to get the current products based on the page
   const currentProducts = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     return plantData.slice(startIndex, startIndex + itemsPerPage);
   };
 
-  // Calculate total pages
   const totalPages = Math.ceil(plantData.length / itemsPerPage);
 
-  // Function to handle page change
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
 
-  // Function to handle quantity change for each product
   const handleQuantityChange = (productId, amount) => {
     setProductQuantities((prevQuantities) => ({
       ...prevQuantities,
-      [productId]: Math.max((prevQuantities[productId] || 0) + amount, 0), // Prevents negative quantities
+      [productId]: Math.max((prevQuantities[productId] || 0) + amount, 0),
     }));
   };
 
-  const listLength = plantData.length;
-
   return (
-    <div className="w-100 mainBgCon">
-      <div className="products-container w-100">
+    <div className="mainBgCon">
+      <div className="products-container">
         <div>
-          <p>{listLength} Products</p>
+          <p>{plantData.length} Products</p>
         </div>
         <div className="row">
           {currentProducts().map((plant) => (
-            <div
-              className="d-flex justify-content-center col-12 col-xs-12 col-sm-4 col-md-6 col-lg-4  mr-auto d-flex flex-wrap"
-              key={plant.id}
-            >
+            <div className="col" key={plant.id}>
               <div className="">
-                <div className="product-card d-flex flex-column justify-content-center">
-                  <img
-                    src={plant.productImage}
-                    alt={plant.name}
-                    className="product-image"
-                  />
+                <div className="product-card">
+                  <div className="image-container">
+                    <img
+                      src={plant.productImage}
+                      alt={plant.name}
+                      className="product-image"
+                    />
+                  </div>
                   <button className="viewProductsBtn">View Product</button>
                 </div>
                 <div className="product-info">
-                  <span className="product-name mb-0">{plant.name}</span>
+                  <span className="product-name">{plant.name}</span>
                   <p className="product-maintenance">
                     <span className="product-type">
                       {plant.type} {plant.maintenance}
@@ -573,23 +566,27 @@ function Products() {
                     <span className="sale-price">${plant.salePrice}</span>
                   </div>
                   <div className="btnCon">
-                    <div className="addToCartBtn d-flex">
+                    <div className="addToCartBtn">
                       <button
                         className="addBtnCustom"
                         onClick={() => handleQuantityChange(plant.id, -1)}
                       >
-                        <FaMinus size={15} />
+                        <FaMinus size={8} />
                       </button>
                       <p className="addCartText">
-                        {productQuantities[plant.id] > 0
-                          ? productQuantities[plant.id]
-                          : "Add to Cart"}
+                        {productQuantities[plant.id] > 0 ? (
+                          productQuantities[plant.id]
+                        ) : (
+                          <button className="addtoCartAdvBtn">
+                            Add to Cart
+                          </button>
+                        )}
                       </p>
                       <button
                         className="addBtnCustom"
                         onClick={() => handleQuantityChange(plant.id, 1)}
                       >
-                        <FaPlus size={15} />
+                        <FaPlus size={8} />
                       </button>
                     </div>
                     <button className="buyOnRent">Buy on Rent</button>
