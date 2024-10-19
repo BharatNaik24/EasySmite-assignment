@@ -13,7 +13,7 @@ function App() {
       <div>
         <Header />
         <LandingPage />
-        <div className="d-flex p-4">
+        <div className="p-4 filterAndProductClass">
           <Filter />
           <Routes>
             <Route path="/" element={<Products />} /> {/* Home page */}

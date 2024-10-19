@@ -10,6 +10,11 @@
   background-color: #f0ffe5;
   margin-bottom: 20px;
 }
+@media screen and (max-width:990px) {
+  .filter-container{
+    width: 90% !important; 
+  }
+}
 
 .filter-header {
   display: flex;
