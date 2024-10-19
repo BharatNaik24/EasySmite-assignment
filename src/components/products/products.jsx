@@ -5,6 +5,7 @@ import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import Pagination from "../pagination/pagination ";
 import { TbCurrencyRupee } from "react-icons/tb";
+import CartModal from "../addToCartModal/addToCartModal";
 
 const plantData = [
   {
@@ -506,6 +507,9 @@ const plantData = [
 function Products() {
   const [currentPage, setCurrentPage] = useState(1);
   const [productQuantities, setProductQuantities] = useState({});
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
   const itemsPerPage = 12;
 
   const currentProducts = () => {
@@ -524,6 +528,11 @@ function Products() {
       ...prevQuantities,
       [productId]: Math.max((prevQuantities[productId] || 0) + amount, 0),
     }));
+  };
+
+  const handleAddToCart = (product) => {
+    setSelectedProduct(product);
+    setShowModal(true);
   };
 
   return (
@@ -583,7 +592,10 @@ function Products() {
                         {productQuantities[plant.id] > 0 ? (
                           productQuantities[plant.id]
                         ) : (
-                          <button className="addtoCartAdvBtn">
+                          <button
+                            className="addtoCartAdvBtn"
+                            onClick={() => handleAddToCart(plant)}
+                          >
                             Add to Cart
                           </button>
                         )}
@@ -596,7 +608,12 @@ function Products() {
                       </button>
                     </div>
                     {productQuantities[plant.id] > 0 ? (
-                      <button className="buyOnRent">Add to cart</button>
+                      <button
+                        className="buyOnRent"
+                        onClick={() => handleAddToCart(plant)}
+                      >
+                        Add to cart
+                      </button>
                     ) : (
                       <button className="buyOnRent">Buy on Rent</button>
                     )}
@@ -613,6 +630,11 @@ function Products() {
           onPageChange={handlePageChange}
         />
       </div>
+      <CartModal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        product={selectedProduct}
+      />
     </div>
   );
 }

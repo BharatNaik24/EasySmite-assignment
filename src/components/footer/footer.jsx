@@ -4,7 +4,7 @@ import "./footer.css";
 function Footer() {
   return (
     <div className="mainFooter">
-      <div className="footer d-flex container-fluid w-100 justify-content-start flex-row flex-wrap">
+      <div className="footer d-flex container-fluid w-100 m-0 justify-content-start flex-row flex-wrap">
         <div className="subscribeCon p-3 m-0">
           <h5>SUBSCRIBE TO OUR NEWSLETTER</h5>
           <p>

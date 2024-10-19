@@ -1,0 +1,46 @@
+.text-center {
+  text-align: center; 
+  width: 100%;
+  color: #fff;
+}
+
+
+.price-rating {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 10px;
+}
+
+.original-price,
+.sale-price {
+  margin: 5px 0; 
+  color: #ffffff;
+  font-size: 16px;
+}
+
+
+.custom-modal .modal-content {
+  height: 600px; 
+  background-image: url('https://i.postimg.cc/6qQ9g7mB/still-life-with-indoor-plants.jpg');
+  background-size: cover; 
+  background-position: center; 
+
+}
+
+.custom-modal .modal-header {
+  border-bottom: none; 
+}
+
+.custom-modal .modal-body {
+  color: #ffffff; 
+  font-size: 20px;
+  text-shadow: #000;
+}
+
+.confirmBtn {
+    background-color: #165314;
+    border: none;
+    outline: none;
+}
