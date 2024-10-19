@@ -1,7 +1,8 @@
 .loremPara {
     width: 85%;
-    margin-left: 4.5%;
+    margin-left: 4% !important ;
     padding-left: auto;
+    margin-bottom: 20px !important;
 }
 
 .loremButtons {
@@ -11,5 +12,5 @@
 }
 
 .nurseryHeading {
-    margin-left: 4.5%;
+    margin-left: 4% !important;
 }

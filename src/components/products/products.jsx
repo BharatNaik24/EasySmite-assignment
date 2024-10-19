@@ -1,6 +1,6 @@
 import { v4 as uuidV4 } from "uuid";
 import "./products.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { FaMinus, FaPlus } from "react-icons/fa";
 import Pagination from "../pagination/pagination ";
@@ -509,6 +509,7 @@ function Products() {
   const [productQuantities, setProductQuantities] = useState({});
   const [showModal, setShowModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isFirstMount, setIsFirstMount] = useState(true); // Initialize to true
 
   const itemsPerPage = 12;
 
@@ -534,6 +535,15 @@ function Products() {
     setSelectedProduct(product);
     setShowModal(true);
   };
+
+  useEffect(() => {
+    if (isFirstMount) {
+      window.scrollTo(0, 0); // Scroll to (0, 0) on first mount
+      setIsFirstMount(false); // Set to false after the first mount
+    } else {
+      window.scrollTo(0, 500); // Scroll to (0, 500) on pagination change
+    }
+  }, [currentPage]);
 
   return (
     <div className="mainBgCon">
@@ -570,14 +580,16 @@ function Products() {
                     />
                     <span>{plant.rating}</span>
                   </div>
-                  <div className="price-rating">
-                    <span className="original-price">
-                      <TbCurrencyRupee size={15} />
-                      {plant.originalPrice}
-                    </span>
-                    <span className="sale-price">
-                      <TbCurrencyRupee size={20} />
-                      {plant.salePrice}
+                  <div className="mainSpanCon">
+                    <span className="spanCon">
+                      <p className="original-price">
+                        <TbCurrencyRupee size={15} />
+                        {plant.originalPrice}
+                      </p>
+                      <p className="salePrice">
+                        <TbCurrencyRupee size={20} />
+                        {plant.salePrice}
+                      </p>
                     </span>
                   </div>
                   <div className="btnCon">

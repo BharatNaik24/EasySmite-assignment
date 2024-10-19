@@ -89,22 +89,31 @@
 }
 
 .price-rating {
-    display: flex;
+    display: flex !important;
     justify-content: flex-start !important;
-    align-items: center;
+    align-items: self-start !important;
     width: 100%;
     margin: 10px 0;
+    color: #000 !important;
+}
+.spanCon {
+  display: flex;
+  align-items: center;
+}
+
+.salePrice {
+  padding-top: 16px;
 }
 
 .original-price {
     text-decoration: line-through;
-    color: #999;
+    color: #999 !important;
     font-size: 12px;
 }
 
 .sale-price {
     font-weight: bold;
-    color: #000;
+    color: #000000 !important;
     margin-left: 10px;
 }
 
