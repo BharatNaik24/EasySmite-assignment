@@ -6,9 +6,10 @@ import Filter from "./components/filter/filter";
 import Products from "./components/products/products";
 import Footer from "./components/footer/footer";
 import { ToastContainer } from "react-toastify";
-import ThankYouPage from "./pages/thankYouPage/thankyoupage";
+
 import { ProductProvider } from "./context/ProductContext";
 import { plantData } from "./plantData/plantData";
+import ThankYouPage from "./pages/thankYouPage/thankyoupage";
 
 function App() {
   return (
