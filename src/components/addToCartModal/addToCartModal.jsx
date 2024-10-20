@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./addToCartModal.css";
 import "react-toastify/dist/ReactToastify.css";
+import { useProduct } from "../../context/ProductContext";
 
 function CartModal({ product, ...props }) {
+  const { selectedProduct } = useProduct();
   const navigate = useNavigate();
 
   const handleClose = () => {
@@ -28,23 +30,28 @@ function CartModal({ product, ...props }) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body className="text-center">
-        {product ? (
+        {selectedProduct ? (
           <>
             <h1>Hey, User</h1>
             <p>
-              Thank you for your interest in <strong>{product.name}</strong>!
+              Thank you for your interest in{" "}
+              <strong>{selectedProduct.name}</strong>!
             </p>
             <p>
-              <img src={product.productImage} alt={product.name} width={100} />
+              <img
+                src={selectedProduct.productImage}
+                alt={selectedProduct.name}
+                width={100}
+              />
             </p>
-            <p>Type: {product.type}</p>
-            <p>Maintenance: {product.maintenance}</p>
+            <p>Type: {selectedProduct.type}</p>
+            <p>Maintenance: {selectedProduct.maintenance}</p>
             <div className="price-rating text-center">
               <span className="original-price">
-                Original Price: ₹{product.originalPrice}
+                Original Price: ₹{selectedProduct.originalPrice}
               </span>
               <span className="sale-price3">
-                Sale Price: ₹{product.salePrice}
+                Sale Price: ₹{selectedProduct.salePrice}
               </span>
             </div>
           </>

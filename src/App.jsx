@@ -7,9 +7,8 @@ import Footer from "./components/footer/footer";
 import { ToastContainer } from "react-toastify";
 import { ProductProvider } from "./context/ProductContext";
 import { plantData } from "./plantData/plantData";
-
 import "./App.css";
-import ThankYouPage from "./pages/thankYouPage/thankyoupage";
+import ThankYou from "./pages/ThankYou/ThankYou";
 
 function App() {
   return (
@@ -30,7 +29,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/thankyoupage" element={<ThankYouPage />} />
+            <Route path="/thankyoupage" element={<ThankYou />} />
           </Routes>
           <Footer />
           <ToastContainer />

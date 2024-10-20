@@ -1,8 +1,10 @@
 import { useProduct } from "../../context/ProductContext";
-import "./thankyoupage.css";
+
 import { MdAttachEmail } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-function ThankYouPage() {
+import "./ThankYou.css";
+
+function ThankYou() {
   const { selectedProduct } = useProduct();
   const navigate = useNavigate();
   return (
@@ -39,4 +41,4 @@ function ThankYouPage() {
   );
 }
 
-export default ThankYouPage;
+export default ThankYou;
