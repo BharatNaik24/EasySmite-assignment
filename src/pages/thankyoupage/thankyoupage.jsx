@@ -1,4 +1,3 @@
-import React from "react";
 import { useProduct } from "../../context/ProductContext";
 import "./thankyoupage.css";
 import { MdAttachEmail } from "react-icons/md";
