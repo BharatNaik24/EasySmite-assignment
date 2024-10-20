@@ -3,10 +3,16 @@ import { useProduct } from "../../context/ProductContext";
 import { MdAttachEmail } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import "./ThankYou.css";
+import { useEffect } from "react";
 
 function ThankYou() {
   const { selectedProduct } = useProduct();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       {selectedProduct ? (

@@ -7,6 +7,7 @@ import CartModal from "../addToCartModal/addToCartModal";
 import { useProduct } from "../../context/ProductContext";
 import { useNavigate } from "react-router-dom";
 import Pagination from "../pagination/pagination ";
+import { Form } from "react-bootstrap";
 
 function Products({ selectProduct }) {
   const { setSelectedProduct } = useProduct();
@@ -58,8 +59,15 @@ function Products({ selectProduct }) {
   return (
     <div className="mainBgCon">
       <div className="products-container">
-        <div>
+        <div className="sortByCon">
           <p>{selectProduct.length} Products</p>
+
+          <select name="selected" className="mx-3 mt-0 p-2 selected">
+            <option value="apple">SORT BY</option>
+            <option value="banana">Newest First</option>
+            <option value="orange">Popular</option>
+            <option value="grape">Price Low to High</option>
+          </select>
         </div>
         <div className="row">
           {currentProducts().map((plant) => (

@@ -85,3 +85,19 @@
     outline: none;
 
 }
+.greenHeader {
+  background-color: #165314;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  height: 50px;
+}
+.bg-body-tertiary {
+  margin-top: -20px;
+}
+.paraGreenHeader {
+  margin-right:10px;
+}

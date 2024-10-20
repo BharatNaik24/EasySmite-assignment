@@ -16,6 +16,11 @@ function Header() {
 
   return (
     <div className="pt-0">
+      <div className="greenHeader px-1">
+        <p></p>
+        <p className="">Free Shipping on orders above 999/-</p>
+        <p className="paraGreenHeader">Call us on: +91 98768 05120</p>
+      </div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid className="maincon">
           <Navbar.Brand href="/" className="logoCon">

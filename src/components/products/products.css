@@ -11,7 +11,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: -10px;
+    margin: 10px;
 }
 
 .col {
@@ -236,4 +236,16 @@
 .pagination-button.active {
     background-color: #0056b3;
     font-weight: bold;
+}
+
+.sortByCon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.selected {
+  background-color: #165314;
+  color: #fff;
+  border: none;
+  outline: none;
 }
