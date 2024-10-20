@@ -19,6 +19,8 @@ function LandingPage() {
             paddingRight: "25px",
             paddingTop: "3px",
             paddingBottom: "3px",
+            border: "2px solid gray",
+            outline: "none",
           }}
         >
           Plants
@@ -33,6 +35,8 @@ function LandingPage() {
             paddingRight: "25px",
             paddingTop: "3px",
             paddingBottom: "3px",
+            border: "2px solid gray",
+            outline: "none",
           }}
         >
           Pots

@@ -6,23 +6,36 @@ import Filter from "./components/filter/filter";
 import Products from "./components/products/products";
 import Footer from "./components/footer/footer";
 import { ToastContainer } from "react-toastify";
+import ThankYouPage from "./pages/thankYouPage/thankyoupage";
+import { ProductProvider } from "./context/ProductContext";
+import { plantData } from "./plantData/plantData";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <Header />
-        <LandingPage />
-        <div className="p-4 filterAndProductClass">
-          <Filter />
+    <ProductProvider>
+      <Router>
+        <div>
+          <Header />
           <Routes>
-            <Route path="/" element={<Products />} /> {/* Home page */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <LandingPage />
+                  <div className="p-4 filterAndProductClass">
+                    <Filter />
+                    <Products selectProduct={plantData} />
+                  </div>
+                </>
+              }
+            />
+            <Route path="/thankyoupage" element={<ThankYouPage />} />
           </Routes>
+          <Footer />
+          <ToastContainer />
         </div>
-        <Footer />
-        <ToastContainer />
-      </div>
-    </Router>
+      </Router>
+    </ProductProvider>
   );
 }
 
