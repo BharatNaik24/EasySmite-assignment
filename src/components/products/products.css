@@ -123,8 +123,8 @@
 /* Small devices (phones) */
 @media screen and (max-width: 576px) {
   .btnCon {
-    flex-direction: column; /* Stack items vertically */
-    align-items: stretch;   /* Stretch items to full width */
+    flex-direction: column;
+    align-items: stretch;  
   } .addToCartBtn {
     margin-bottom: 10px;
   }
@@ -133,8 +133,8 @@
 /* Medium devices (tablets) */
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .btnCon {
-    flex-direction: column;    /* Arrange items in a row */
-    justify-content: flex-start !important; /* Space between items */
+    flex-direction: column;    
+    justify-content: flex-start !important; 
   } .addToCartBtn {
     margin-bottom: 10px;
   }
@@ -143,8 +143,8 @@
 /* Large devices (desktops) */
 @media screen and (min-width: 769px) and (max-width: 992px) {
   .btnCon {
-    flex-direction: column;    /* Keep items in a row */
-    justify-content: flex-start; /* Align items to the start */
+    flex-direction: column;   
+    justify-content: flex-start;
   } .addToCartBtn {
     margin-bottom: 10px;
   }
@@ -153,8 +153,8 @@
 /* Extra Large devices (large desktops) */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
   .btnCon {
-    flex-direction: column;    /* Keep items in a row */
-    justify-content: space-between; /* Space between items */
+    flex-direction: column; 
+    justify-content: space-between; 
   } .addToCartBtn {
     margin-bottom: 10px;
   }
@@ -163,8 +163,8 @@
 /* Extra Extra Large devices (larger desktops) */
 @media screen and (min-width: 1201px) {
   .btnCon {
-    flex-direction: row;    /* Keep items in a row */
-    justify-content: space-between; /* Space between items */
+    flex-direction: row;   
+    justify-content: space-between; 
   }
   
 }
